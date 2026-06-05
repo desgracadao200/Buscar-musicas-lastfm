@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GARIMPO ✶ buscador de bandas por tag</title>
+<title> buscador de bandas por tag</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
   body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E");}
   .wrap{max-width:1080px;margin:0 auto;position:relative;z-index:1}
-
+ 
   header{margin-bottom:22px}
   .kicker{font-size:11px;letter-spacing:.42em;color:var(--cyan);text-transform:uppercase}
   h1{font-family:"Unbounded",sans-serif;font-weight:900;line-height:.92;font-size:clamp(38px,9vw,82px);margin:6px 0 2px;
@@ -33,10 +33,10 @@
     text-shadow:0 0 38px rgba(255,45,120,.25);}
   .sub{color:var(--muted);font-size:13px;max-width:64ch}
   .sub b{color:var(--ink)}
-
+ 
   .panel{border:1px solid var(--line);background:var(--card);border-radius:14px;padding:16px;margin-top:18px;backdrop-filter:blur(4px);}
   .panel h2{font-family:"Unbounded";font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--hot);margin-bottom:10px;display:flex;justify-content:space-between;align-items:center}
-
+ 
   label{display:block;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.14em;margin-bottom:5px}
   input,select{width:100%;background:#0d0517;border:1px solid var(--line);color:var(--ink);font-family:"JetBrains Mono";font-size:14px;padding:11px 12px;border-radius:9px;outline:none;}
   input:focus,select:focus{border-color:var(--hot);box-shadow:0 0 0 3px rgba(255,45,120,.15)}
@@ -44,7 +44,7 @@
   @media(min-width:640px){.grid-4{grid-template-columns:repeat(4,1fr)}.grid-2tag{grid-template-columns:1fr 1fr}}
   .check{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--ink);margin-top:12px;cursor:pointer}
   .check input{width:auto}
-
+ 
   button{font-family:"Unbounded";font-weight:700;letter-spacing:.04em;cursor:pointer;border:none;border-radius:10px;padding:12px 18px;font-size:13px;transition:.15s transform,.15s box-shadow;}
   button:active{transform:translateY(1px)}
   .go{background:linear-gradient(95deg,var(--hot),#ff5e9a);color:#fff;width:100%;margin-top:6px;box-shadow:0 6px 24px rgba(255,45,120,.35)}
@@ -52,25 +52,25 @@
   .ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
   .ghost:hover{border-color:var(--hot)}
   .mini{font-family:"JetBrains Mono";font-size:11px;font-weight:500;padding:5px 10px}
-
+ 
   .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px}
   .catlabel{width:100%;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin:12px 0 2px;font-weight:700}
   .catlabel:first-child{margin-top:4px}
   .chip{font-family:"JetBrains Mono";font-size:12px;font-weight:500;padding:6px 11px;border-radius:999px;background:rgba(255,45,120,.08);border:1px solid var(--line);color:var(--ink);cursor:pointer;transition:.12s}
   .chip:hover{background:var(--hot);color:#fff;border-color:var(--hot)}
-
+ 
   .hint{font-size:11.5px;color:var(--muted);margin-top:8px}
   a{color:var(--cyan)}
-
+ 
   #progress{height:6px;border-radius:99px;background:rgba(255,255,255,.06);overflow:hidden;margin-top:14px;display:none}
   #bar{height:100%;width:0;background:linear-gradient(90deg,var(--hot),var(--cyan));transition:width .2s}
   #status{font-size:12px;color:var(--muted);margin-top:8px;min-height:16px}
-
+ 
   .summary{display:none;gap:18px;flex-wrap:wrap;margin:22px 0 6px;align-items:flex-end}
   .stat{border-left:2px solid var(--hot);padding-left:10px}
   .stat .n{font-family:"Unbounded";font-weight:900;font-size:26px;line-height:1}
   .stat .l{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.14em;margin-top:3px}
-
+ 
   .results{margin-top:8px;display:grid;gap:10px}
   .band{display:grid;grid-template-columns:38px 1fr auto;gap:14px;align-items:center;border:1px solid var(--line);border-radius:11px;padding:13px 15px;background:var(--card);animation:pop .3s ease both;}
   @keyframes pop{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
@@ -90,7 +90,7 @@
   .act{border:1px solid var(--line);background:transparent;border-radius:7px;padding:4px 8px;font-size:12px;font-family:"JetBrains Mono";color:var(--muted);cursor:pointer;transition:.12s}
   .act:hover{border-color:var(--hot);color:var(--ink)}
   .act.on{color:var(--hot);border-color:var(--hot)}
-
+ 
   .empty{color:var(--muted);text-align:center;padding:40px 10px;font-size:13px}
   .listrow{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 11px;border:1px solid var(--line);border-radius:9px;background:var(--card);margin-top:7px;font-size:13px}
   .listrow .x{cursor:pointer;color:var(--muted);font-size:14px;padding:2px 8px;border-radius:6px}
@@ -109,7 +109,7 @@
     <h1>GARIMPO</h1>
     <p class="sub">Caça bandas por gênero (<b>emo, screamo, crunkcore</b>...) e mostra ouvintes pra você achar <b>pérolas obscuras</b>. Dados via <b>Last.fm</b> — não existe API pública dos "ouvintes mensais" do Spotify, então uso <b>ouvintes totais</b> do Last.fm (ótimo pra ranquear do menor pro maior).</p>
   </header>
-
+ 
   <!-- CHAVE -->
   <div class="panel">
     <h2>1 · chave de API (grátis)</h2>
@@ -117,7 +117,7 @@
     <input id="key" type="text" placeholder="cole sua chave aqui" autocomplete="off" spellcheck="false">
     <p class="hint">Crie em <a href="https://www.last.fm/api/account/create" target="_blank" rel="noopener">last.fm/api/account/create</a> (leva 1 min). A chave fica só nesta aba.</p>
   </div>
-
+ 
   <!-- TAG -->
   <div class="panel">
     <h2>2 · qual cena você quer garimpar?</h2>
@@ -136,7 +136,7 @@
     <p class="hint">Não sabe quais tags existem? <button class="ghost mini" id="discoverBtn">descobrir tags populares ↓</button></p>
     <div class="chips" id="discoverChips" style="margin-top:10px"></div>
   </div>
-
+ 
   <!-- CONTROLES -->
   <div class="panel">
     <h2>3 · como garimpar</h2>
@@ -170,7 +170,7 @@
     <div id="progress"><div id="bar"></div></div>
     <div id="status"></div>
   </div>
-
+ 
   <!-- PARECIDAS -->
   <div class="panel">
     <h2>4 · bandas parecidas (algoritmo do Last.fm)</h2>
@@ -187,47 +187,70 @@
     <p class="hint">Usa o <b>artist.getSimilar</b> do Last.fm. Lista as parecidas com o <b>% de similaridade</b> + ouvintes. Cada resultado (aqui e no garimpo) ganha um botão <b>↗ parecidas</b> pra encadear a descoberta.</p>
     <button class="go" id="simBtn">↗ ACHAR BANDAS PARECIDAS</button>
   </div>
-
+ 
+  <!-- MÚSICAS PARECIDAS -->
+  <div class="panel">
+    <h2>5 · músicas parecidas (algoritmo do Last.fm)</h2>
+    <div class="row grid-2tag">
+      <div>
+        <label for="trkArtist">artista</label>
+        <input id="trkArtist" type="text" placeholder="ex: My Chemical Romance" spellcheck="false">
+      </div>
+      <div>
+        <label for="trkName">música</label>
+        <input id="trkName" type="text" placeholder="ex: Welcome to the Black Parade" spellcheck="false">
+      </div>
+    </div>
+    <div class="row grid-4" style="margin-top:12px">
+      <div>
+        <label for="trkQty">quantas músicas</label>
+        <select id="trkQty"><option>10</option><option selected>20</option><option>30</option><option>50</option></select>
+      </div>
+    </div>
+    <p class="hint">Usa o <b>track.getSimilar</b> do Last.fm: você dá uma música e ele lista faixas parecidas com o <b>% de similaridade</b>. Cada faixa tem <b>↗ música</b> (encadeia por faixa) e <b>↗ banda</b> (joga o artista no garimpo de bandas parecidas).</p>
+    <button class="go" id="trkBtn">♪ ACHAR MÚSICAS PARECIDAS</button>
+  </div>
+ 
   <!-- RESULTADOS -->
   <div class="summary" id="summary">
-    <div class="stat"><div class="n" id="sCount">0</div><div class="l">bandas</div></div>
-    <div class="stat"><div class="n" id="sAvg">0</div><div class="l">média ouvintes</div></div>
-    <div class="stat"><div class="n" id="sMin">0</div><div class="l">menor</div></div>
-    <div class="stat"><div class="n" id="sGems">0</div><div class="l">pérolas</div></div>
+    <div class="stat"><div class="n" id="sCount">0</div><div class="l" id="lblA">bandas</div></div>
+    <div class="stat"><div class="n" id="sAvg">0</div><div class="l" id="lblB">média ouvintes</div></div>
+    <div class="stat"><div class="n" id="sMin">0</div><div class="l" id="lblC">menor</div></div>
+    <div class="stat" id="statD"><div class="n" id="sGems">0</div><div class="l" id="lblD">pérolas</div></div>
     <button class="ghost mini" id="csvBtn" style="margin-left:auto;align-self:center">⤓ exportar CSV</button>
   </div>
   <div class="results" id="results"></div>
-
+ 
   <!-- FAVORITOS -->
   <div class="panel" id="favPanel" style="display:none">
     <h2>★ bandas favoritas <button class="ghost mini" id="favCsvBtn">⤓ CSV</button></h2>
     <div id="favList"></div>
   </div>
-
+ 
   <!-- HISTÓRICO -->
   <div class="panel" id="histPanel" style="display:none">
     <h2>↺ histórico de buscas <button class="ghost mini" id="histClear">limpar</button></h2>
     <p class="hint">clique numa busca pra recarregar os campos.</p>
     <div id="histList"></div>
   </div>
-
+ 
   <!-- JÁ CONHEÇO -->
   <div class="panel" id="knownPanel" style="display:none">
     <h2>✓ já conheço (ocultas) <button class="ghost mini" id="knownClear">limpar</button></h2>
     <div id="knownList"></div>
   </div>
-
+ 
   <footer>
     Feito pra garimpar cenas pequenas · dados © <a href="https://www.last.fm" target="_blank" rel="noopener">Last.fm</a> · "ouvintes" = totais (scrobblers), não mensais.<br>
     Favoritos/histórico/"já conheço" ficam salvos no seu navegador. Se a busca travar por CORS no preview, baixe o .html e abra direto no navegador.
   </footer>
 </div>
-
+ 
 <script>
 const API = "https://ws.audioscrobbler.com/2.0/";
 const $ = id => document.getElementById(id);
 const fmt = n => Number(n).toLocaleString("pt-BR");
-
+ 
 /* ---------- camada de storage: artifact -> localStorage -> memória ---------- */
 const mem = {};
 const hasWS = (typeof window!=="undefined") && window.storage && typeof window.storage.get==="function";
@@ -248,11 +271,11 @@ const Store = {
     }catch(_){}
   }
 };
-
+ 
 let favorites = {};   // nome_lower -> {name,url,listeners,tags}
 let known = {};       // nome_lower -> name
 let history = [];     // [{tag,tag2,page,pages,perPage,sort,max,found,ts}]
-
+ 
 /* ---------- tags ---------- */
 const PRESETS = {
   "emo / scene": ["emo","midwest emo","emo revival","screamo","skramz","emoviolence","post-hardcore","sasscore","mall emo","pop emo","crunkcore","scenecore","easycore","twinkle"],
@@ -268,11 +291,11 @@ const PRESETS = {
   "global / outros": ["reggae","dub","afrobeat","mpb","bossa nova","samba","cumbia","flamenco","world","experimental","noise","drone","industrial","gothic","darkwave","new wave"],
   "vibes / moods": ["chill","melancholy","dark","dreamy","aggressive","romantic","summer","nostalgia","instrumental","female vocalists","90s","2000s","80s"]
 };
-
+ 
 let activeTag = "tag";
 $("tag").addEventListener("focus", ()=>activeTag="tag");
 $("tag2").addEventListener("focus", ()=>activeTag="tag2");
-
+ 
 const chipBox = $("presetChips");
 Object.entries(PRESETS).forEach(([cat, tags])=>{
   const lbl=document.createElement("div"); lbl.className="catlabel"; lbl.textContent=cat; chipBox.appendChild(lbl);
@@ -282,7 +305,7 @@ Object.entries(PRESETS).forEach(([cat, tags])=>{
     chipBox.appendChild(c);
   });
 });
-
+ 
 async function lfm(params){
   const url = API + "?" + new URLSearchParams({...params, format:"json"}).toString();
   const r = await fetch(url);
@@ -290,7 +313,7 @@ async function lfm(params){
   if(j.error) throw new Error(j.message || ("erro "+j.error));
   return j;
 }
-
+ 
 $("discoverBtn").onclick = async ()=>{
   const key = $("key").value.trim(); const box = $("discoverChips");
   if(!key){ box.innerHTML='<span class="hint" style="color:var(--hot)">cole a chave de API primeiro.</span>'; return; }
@@ -305,18 +328,18 @@ $("discoverBtn").onclick = async ()=>{
     });
   }catch(e){ box.innerHTML='<span class="hint" style="color:var(--hot)">'+e.message+'</span>'; }
 };
-
+ 
 /* ---------- busca ---------- */
 let running=false;
-let lastList=[], lastQuery="";
+let lastList=[], lastQuery="", lastKind="band";
 const CAP=250;
-
+ 
 $("searchBtn").onclick = async ()=>{
   if(running) return;
   const key=$("key").value.trim(), tag=$("tag").value.trim(), tag2=$("tag2").value.trim();
   if(!key){ $("status").innerHTML='<span style="color:var(--hot)">⚠ cole sua chave de API (passo 1).</span>'; return; }
   if(!tag){ $("status").innerHTML='<span style="color:var(--hot)">⚠ escolha uma tag (passo 2).</span>'; return; }
-
+ 
   running=true;
   const perPage=+$("qty").value, startPage=+$("page").value||1, nPages=+$("pages").value, sort=$("sort").value;
   const maxList=$("max").value.trim()===""?Infinity:+$("max").value;
@@ -324,7 +347,7 @@ $("searchBtn").onclick = async ()=>{
   const res=$("results"), prog=$("progress"), bar=$("bar"), st=$("status"), sum=$("summary");
   res.innerHTML=""; sum.style.display="none"; prog.style.display="block"; bar.style.width="0%";
   $("searchBtn").textContent="garimpando...";
-
+ 
   try{
     // 2ª tag: conjunto de pertencimento (1 chamada)
     let set2=null;
@@ -333,7 +356,7 @@ $("searchBtn").onclick = async ()=>{
       try{ const t2=await lfm({method:"tag.getTopArtists", tag:tag2, api_key:key, limit:1000, page:1});
         set2=new Set((t2.topartists?.artist||[]).map(a=>a.name.toLowerCase())); }catch(_){ set2=new Set(); }
     }
-
+ 
     // varredura multi-página: junta nomes (1 chamada por página), dedup
     let pool=[]; const seen=new Set();
     for(let p=0;p<nPages;p++){
@@ -346,11 +369,11 @@ $("searchBtn").onclick = async ()=>{
       await new Promise(r=>setTimeout(r,120));
     }
     if(!pool.length) throw new Error("nenhuma banda nessa tag/página. tente outra tag ou outra página inicial.");
-
+ 
     // exclui já conhecidas antes do getInfo (economiza chamadas) se ocultar ligado
     if(hideKnown) pool = pool.filter(a=>!known[a.name.toLowerCase()]);
     if(pool.length>CAP){ pool=pool.slice(0,CAP); }
-
+ 
     const collected=[];
     for(let i=0;i<pool.length;i++){
       const a=pool[i];
@@ -370,7 +393,7 @@ $("searchBtn").onclick = async ()=>{
       await new Promise(r=>setTimeout(r,140));
     }
     bar.style.width="100%";
-
+ 
     let list=collected;
     if(tag2){ const t2l=tag2.toLowerCase(); list=list.filter(b=>(set2&&set2.has(b.name.toLowerCase()))||b.allTags.includes(t2l)); }
     if(hideKnown) list=list.filter(b=>!known[b.name.toLowerCase()]);
@@ -378,11 +401,11 @@ $("searchBtn").onclick = async ()=>{
     if(sort==="asc") list.sort((a,b)=>a.listeners-b.listeners);
     else if(sort==="desc") list.sort((a,b)=>b.listeners-a.listeners);
     else list.sort((a,b)=>a.rank-b.rank);
-
+ 
     lastList=list; lastQuery=tag2?(tag+" + "+tag2):tag;
     render(list, maxList);
     st.textContent="pronto · "+list.length+" bandas (de "+pool.length+" analisadas em "+nPages+" pág.).";
-
+ 
     await addHistory({tag,tag2,page:startPage,pages:nPages,perPage,sort,max:$("max").value.trim(),found:list.length,ts:Date.now()});
   }catch(e){
     res.innerHTML='<div class="empty" style="color:var(--hot)">✗ '+e.message+'</div>'; st.textContent="";
@@ -390,7 +413,7 @@ $("searchBtn").onclick = async ()=>{
     running=false; prog.style.display="none"; $("searchBtn").textContent="⌕ GARIMPAR BANDAS";
   }
 };
-
+ 
 /* ---------- bandas parecidas (artist.getSimilar) ---------- */
 async function findSimilar(name){
   if(running) return;
@@ -399,20 +422,20 @@ async function findSimilar(name){
   const qty=+$("simQty").value;
   if(!key){ $("status").innerHTML='<span style="color:var(--hot)">⚠ cole sua chave de API (passo 1).</span>'; window.scrollTo({top:0,behavior:"smooth"}); return; }
   if(!name){ $("status").innerHTML='<span style="color:var(--hot)">⚠ digite o nome de uma banda (passo 4).</span>'; return; }
-
+ 
   running=true;
   const hideKnown=$("hideKnown").checked;
   const res=$("results"), prog=$("progress"), bar=$("bar"), st=$("status");
   res.innerHTML=""; $("summary").style.display="none"; prog.style.display="block"; bar.style.width="0%";
   $("simBtn").textContent="buscando..."; $("searchBtn").textContent="...";
-
+ 
   try{
     st.textContent="buscando parecidas a \""+name+"\"...";
     const sim=await lfm({method:"artist.getSimilar", artist:name, api_key:key, limit:qty, autocorrect:1});
     let arr=(sim.similarartists?.artist)||[];
     if(!arr.length) throw new Error("nenhuma parecida encontrada. confira o nome da banda.");
     if(hideKnown) arr=arr.filter(a=>!known[a.name.toLowerCase()]);
-
+ 
     const collected=[];
     for(let i=0;i<arr.length;i++){
       const a=arr[i];
@@ -434,7 +457,7 @@ async function findSimilar(name){
     bar.style.width="100%";
     // mantém ordem de similaridade (a API já vem ordenada por match desc)
     collected.sort((x,y)=>y.match-x.match);
-
+ 
     lastList=collected; lastQuery="parecidas a "+name;
     render(collected, Infinity);
     st.textContent="pronto · "+collected.length+" bandas parecidas a \""+name+"\".";
@@ -447,7 +470,82 @@ async function findSimilar(name){
   }
 }
 $("simBtn").onclick=()=>findSimilar();
-
+ 
+/* ---------- músicas parecidas (track.getSimilar) ---------- */
+async function findSimilarTracks(artist, track){
+  if(running) return;
+  const key=$("key").value.trim();
+  artist=(artist||$("trkArtist").value||"").trim();
+  track=(track||$("trkName").value||"").trim();
+  const qty=+$("trkQty").value;
+  if(!key){ $("status").innerHTML='<span style="color:var(--hot)">⚠ cole sua chave de API (passo 1).</span>'; window.scrollTo({top:0,behavior:"smooth"}); return; }
+  if(!artist||!track){ $("status").innerHTML='<span style="color:var(--hot)">⚠ preencha artista e música (passo 5).</span>'; return; }
+ 
+  running=true;
+  const res=$("results"), prog=$("progress"), bar=$("bar"), st=$("status");
+  res.innerHTML=""; $("summary").style.display="none"; prog.style.display="block"; bar.style.width="10%";
+  $("trkBtn").textContent="buscando..."; $("simBtn").textContent="..."; $("searchBtn").textContent="...";
+ 
+  try{
+    st.textContent="buscando músicas parecidas a \""+track+"\" de "+artist+"...";
+    const r=await lfm({method:"track.getSimilar", artist, track, api_key:key, limit:qty, autocorrect:1});
+    let arr=(r.similartracks?.track)||[];
+    if(!arr.length) throw new Error("nenhuma música parecida. confira o nome do artista e da faixa.");
+    bar.style.width="100%";
+    const list=arr.map(t=>({
+      name: t.name, artist: t.artist?.name||"", url: t.url||"",
+      playcount:+(t.playcount||0), match:+(t.match||0)
+    }));
+    lastList=list; lastQuery="músicas parecidas a "+track+" — "+artist;
+    renderTracks(list);
+    st.textContent="pronto · "+list.length+" músicas parecidas a \""+track+"\".";
+    await addHistory({simtrack:true, artist, track, qty, found:list.length, ts:Date.now()});
+  }catch(e){
+    res.innerHTML='<div class="empty" style="color:var(--hot)">✗ '+e.message+'</div>'; st.textContent="";
+  }finally{
+    running=false; prog.style.display="none";
+    $("trkBtn").textContent="♪ ACHAR MÚSICAS PARECIDAS"; $("simBtn").textContent="↗ ACHAR BANDAS PARECIDAS"; $("searchBtn").textContent="⌕ GARIMPAR BANDAS";
+  }
+}
+$("trkBtn").onclick=()=>findSimilarTracks();
+ 
+function renderTracks(list){
+  const res=$("results"); res.innerHTML="";
+  if(!list.length){ res.innerHTML='<div class="empty">nenhuma música encontrada.</div>'; $("summary").style.display="none"; return; }
+  const avg=Math.round(list.reduce((s,t)=>s+t.match,0)/list.length*100);
+  const top=Math.round(Math.max(...list.map(t=>t.match))*100);
+  $("sCount").textContent=fmt(list.length); $("sAvg").textContent=avg+"%"; $("sMin").textContent=top+"%";
+  $("lblA").textContent="músicas"; $("lblB").textContent="match médio"; $("lblC").textContent="maior match";
+  $("statD").style.display="none"; lastKind="track";
+  $("summary").style.display="flex";
+ 
+  list.forEach((t,i)=>{
+    const key=("trk::"+t.artist+"::"+t.name).toLowerCase();
+    const faved=!!favorites[key];
+    const el=document.createElement("div"); el.className="band"; el.style.animationDelay=(i*16)+"ms"; el.dataset.key=key;
+    el.innerHTML=
+      '<div class="rank">'+String(i+1).padStart(2,"0")+'</div>'+
+      '<div><div class="bname"><a href="'+t.url+'" target="_blank" rel="noopener">'+t.name+'</a></div>'+
+      '<div class="btags"><span style="background:rgba(40,224,200,.12)">por '+t.artist+'</span></div>'+
+      '<div class="gem" style="color:var(--hot)">♁ '+Math.round(t.match*100)+'% parecida</div></div>'+
+      '<div class="nums"><div class="big">'+(t.playcount?fmt(t.playcount):"—")+'</div><div class="lab">plays</div>'+
+      '<div class="acts">'+
+      '<button class="act trksim" title="músicas parecidas a esta">↗ música</button>'+
+      '<button class="act bndsim" title="bandas parecidas ao artista">↗ banda</button>'+
+      '<button class="act fav'+(faved?' on':'')+'" title="favoritar">'+(faved?'★':'☆')+'</button>'+
+      '</div></div>';
+    el.querySelector(".trksim").onclick=()=>{ $("trkArtist").value=t.artist; $("trkName").value=t.name; findSimilarTracks(t.artist,t.name); };
+    el.querySelector(".bndsim").onclick=()=>{ $("simArtist").value=t.artist; findSimilar(t.artist); };
+    el.querySelector(".fav").onclick=(ev)=>toggleFavTrack(t, ev.currentTarget, key);
+    res.appendChild(el);
+  });
+}
+async function toggleFavTrack(t, btn, key){
+  if(favorites[key]){ delete favorites[key]; btn.classList.remove("on"); btn.textContent="☆"; }
+  else { favorites[key]={name:t.name+" — "+t.artist, url:t.url, listeners:0, tags:[], track:true}; btn.classList.add("on"); btn.textContent="★"; }
+  await Store.set("gp_favorites", favorites); renderFav();
+}
+ 
 function render(list, maxList){
   const res=$("results"); res.innerHTML="";
   if(!list.length){ res.innerHTML='<div class="empty">nenhuma banda dentro dos filtros. afrouxe o teto ou troque a tag.</div>'; $("summary").style.display="none"; return; }
@@ -458,8 +556,10 @@ function render(list, maxList){
   const gems=list.filter(b=>b.listeners>0&&b.listeners<=gemThresh).length;
   $("sCount").textContent=fmt(list.length); $("sAvg").textContent=fmt(avg);
   $("sMin").textContent=fmt(min); $("sGems").textContent=fmt(gems);
+  $("lblA").textContent="bandas"; $("lblB").textContent="média ouvintes"; $("lblC").textContent="menor"; $("lblD").textContent="pérolas";
+  $("statD").style.display=""; lastKind="band";
   $("summary").style.display="flex";
-
+ 
   list.forEach((b,i)=>{
     const rare=b.listeners>0&&b.listeners<=gemThresh;
     const key=b.name.toLowerCase();
@@ -483,7 +583,7 @@ function render(list, maxList){
     res.appendChild(el);
   });
 }
-
+ 
 /* ---------- favoritos ---------- */
 async function toggleFav(b, btn){
   const k=b.name.toLowerCase();
@@ -504,7 +604,7 @@ function renderFav(){
     box.appendChild(row);
   });
 }
-
+ 
 /* ---------- já conheço ---------- */
 async function markKnown(b, el){
   const k=b.name.toLowerCase(); known[k]=b.name; await Store.set("gp_known", known);
@@ -522,7 +622,7 @@ function renderKnown(){
   });
 }
 $("knownClear").onclick=async()=>{ known={}; await Store.set("gp_known",known); renderKnown(); };
-
+ 
 /* ---------- histórico ---------- */
 async function addHistory(rec){
   history.unshift(rec); history=history.slice(0,25); await Store.set("gp_history", history); renderHist();
@@ -532,7 +632,11 @@ function renderHist(){
   history.forEach(h=>{
     const when=new Date(h.ts).toLocaleString("pt-BR",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"});
     const row=document.createElement("div"); row.className="listrow histline";
-    if(h.sim){
+    if(h.simtrack){
+      row.innerHTML='<span><b style="color:var(--cyan)">♪ parecidas a '+h.track+'</b> <span style="color:var(--muted);font-size:11px">· '+h.artist+' · '+h.found+' achadas</span></span>'+
+        '<span style="color:var(--muted);font-size:11px">'+when+'</span>';
+      row.onclick=()=>{ $("trkArtist").value=h.artist; $("trkName").value=h.track; $("trkQty").value=String(h.qty); findSimilarTracks(h.artist,h.track); };
+    } else if(h.sim){
       row.innerHTML='<span><b style="color:var(--hot)">↗ parecidas a '+h.artist+'</b> <span style="color:var(--muted);font-size:11px">· '+h.found+' achadas</span></span>'+
         '<span style="color:var(--muted);font-size:11px">'+when+'</span>';
       row.onclick=()=>{ $("simArtist").value=h.artist; $("simQty").value=String(h.qty); findSimilar(h.artist); };
@@ -548,7 +652,7 @@ function renderHist(){
   });
 }
 $("histClear").onclick=async()=>{ history=[]; await Store.set("gp_history",history); renderHist(); };
-
+ 
 /* ---------- CSV ---------- */
 function downloadCSV(rows, head, filename){
   const esc=v=>'"'+String(v).replace(/"/g,'""')+'"';
@@ -558,14 +662,23 @@ function downloadCSV(rows, head, filename){
   document.body.appendChild(a); a.click(); document.body.removeChild(a); URL.revokeObjectURL(url);
 }
 $("csvBtn").onclick=()=>{ if(!lastList.length) return;
-  const rows=lastList.map((b,i)=>[i+1,b.name,b.listeners,b.playcount,b.tags.join("; "),b.url,lastQuery]);
-  downloadCSV(rows,["posicao","banda","ouvintes","plays","tags","url","busca"],"garimpo-"+lastQuery.replace(/[^a-z0-9]+/gi,"-").toLowerCase()+".csv");
+  let rows, head, fname;
+  if(lastKind==="track"){
+    head=["posicao","musica","artista","match_%","plays","url","busca"];
+    rows=lastList.map((t,i)=>[i+1,t.name,t.artist,Math.round(t.match*100),t.playcount,t.url,lastQuery]);
+    fname="garimpo-musicas.csv";
+  } else {
+    head=["posicao","banda","ouvintes","plays","tags","url","busca"];
+    rows=lastList.map((b,i)=>[i+1,b.name,b.listeners,b.playcount,b.tags.join("; "),b.url,lastQuery]);
+    fname="garimpo-"+lastQuery.replace(/[^a-z0-9]+/gi,"-").toLowerCase()+".csv";
+  }
+  downloadCSV(rows,head,fname);
 };
 $("favCsvBtn").onclick=()=>{ const keys=Object.keys(favorites); if(!keys.length) return;
   const rows=keys.map(k=>[favorites[k].name,favorites[k].listeners,favorites[k].tags.join("; "),favorites[k].url]);
   downloadCSV(rows,["banda","ouvintes","tags","url"],"garimpo-favoritos.csv");
 };
-
+ 
 /* ---------- init ---------- */
 (async()=>{
   favorites=(await Store.get("gp_favorites"))||{};
